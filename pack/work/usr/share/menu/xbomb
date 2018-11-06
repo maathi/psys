@@ -1,0 +1,4 @@
+?package(xbomb):needs="X11" \
+  section="Games/Puzzles" \
+  icon="/usr/share/pixmaps/xbomb.xpm" \
+  title="XBomb" command="/usr/games/xbomb"

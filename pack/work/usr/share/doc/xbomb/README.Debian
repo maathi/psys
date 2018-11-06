@@ -1,0 +1,22 @@
+Note on the high score files:
+
+The high-score files are kept in /var/games/xbomb and are named
+xbomb3.hi, xbomb4.hi and xbomb6.hi (for triangles, squares, and
+hexagons, respectively).  These files are all writable by group
+"games", and xbomb is sgid "games" so that it can write to them.
+
+If you want to change the permissions on xbomb, you should be aware
+that these files must match -- they must somehow be writable by
+xbomb.  If they aren't, you're on your own.
+
+In earlier versions of xbomb, the /var/games/xbomb directory was owned
+by root:games, and was group-writable.  This is no longer the case, so
+xbomb cannot recreate these files if they disappear (assuming it ever
+could, which I've never tested).
+
+You may also want to know that these files are not technically part of
+the xbomb package.  They are created by the post-install script if
+they don't already exist, and removed by the pre-remove script when
+you purge the package.  If you're trying to install this Debian
+package on a RPM or Slackware system, this may be important
+information for you.

@@ -1,0 +1,5 @@
+Package: xbomb
+Version: 0.90-1
+Architecture: amd64
+Maintainer: Ubuntu
+Description: xbomb is a cool game

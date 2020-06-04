@@ -9,7 +9,7 @@ from github3 import login
 from subprocess import call
 
 def connect_to_github() :
-	gh = login("mehdi-desu",password="1090prixttc")
+	gh = login("mehdi-desu",password="password-goes-here")
 	repo = gh.repository("mehdi-desu","projet_impossible")
 	branch = repo.branch("master")
 
